@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mushroom : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +16,14 @@ public class Mushroom : MonoBehaviour
     {
         
     }
+
+    void OnMouseDrag()
+    {
+        // Debug.Log(name);
+
+        var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos.z = 0f;
+        gameObject.transform.position = mouseWorldPos;
+    }
+
 }

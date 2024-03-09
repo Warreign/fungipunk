@@ -1,1 +1,114 @@
-{}
+{
+    "name": "GameActions",
+    "maps": [
+        {
+            "name": "Brewery",
+            "id": "b88c587a-850e-41fd-a3a8-2667669c8645",
+            "actions": [
+                {
+                    "name": "SpawnMushroom",
+                    "type": "Button",
+                    "id": "782ff2d8-b0d1-493f-b6b5-a89c765eec50",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GoOutside",
+                    "type": "Button",
+                    "id": "f2ec0b3f-e58d-4794-83f2-03abcab2e3c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RefuseCustomer",
+                    "type": "Button",
+                    "id": "84082dcb-b74f-4dee-8078-757c45d8711c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AcceptCustomer",
+                    "type": "Button",
+                    "id": "5621e025-e626-4bda-8451-5c8d60779698",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DiscardBrew",
+                    "type": "Button",
+                    "id": "d12c5f39-e9c1-46a6-8c66-04d35a6bcea5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0f3e25b6-ae92-4f5e-9de4-eb4ee927550c",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnMushroom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "311636dd-364c-43e9-a1d4-3fc5e41d7851",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GoOutside",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d704aea6-e50e-4470-98d2-7048c3c39656",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RefuseCustomer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4984629d-6736-42f4-9690-02cc3fb14284",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AcceptCustomer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4caaf15-aead-4c42-8fb5-d27fe065d213",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DiscardBrew",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
