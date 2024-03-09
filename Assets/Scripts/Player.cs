@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public int mushroomSpawnCount = 30;
     public int mushroomInventory = 15;
     public int catchedMushroomCount = 0;
+    private int count = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -24,12 +25,9 @@ public class Player : MonoBehaviour
 
     IEnumerator ExampleCoroutine()
     {
-        int count = 0;
-
         while(count < mushroomSpawnCount){
             yield return new WaitForSeconds(waitTime);
             GenerateMushroom();
-            count++;
         }
 
         //TODO level change
@@ -51,10 +49,11 @@ public class Player : MonoBehaviour
     }
 
     void GenerateMushroom(){
-        int quantity = 1;
+        int quantity = rnd.Next(1,4);
         for(int i = 0; i < quantity; i++){
             var tmp = Instantiate(prefabs[rnd.Next(0, 5)], new Vector3((float)(rnd.NextDouble() * (10 + 10) - 10), 5.8f, 0f), Quaternion.Euler(0, 0, Random.Range(0, 360)));
             Destroy(tmp, 10);
+            count++;
         }
     }
 

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 651685}
   - component: {fileID: 651684}
   - component: {fileID: 651687}
+  - component: {fileID: 651688}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -163,6 +164,7 @@ MonoBehaviour:
   countM: {fileID: 1439132965}
   waitTime: 1
   mushroomSpawnCount: 50
+  mushroomInventory: 15
   catchedMushroomCount: 0
 --- !u!212 &651685
 SpriteRenderer:
@@ -225,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 651683}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -4.37, z: 0}
+  m_LocalPosition: {x: 0.03, y: -3.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -266,12 +268,66 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.5075014, y: 0.18003654}
-  - {x: 0.5, y: 0.18378687}
+  - {x: -0.32713273, y: 0.18003654}
+  - {x: 0.3459478, y: 0.18838763}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!60 &651688
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.4376109, y: 0.5013008}
+      - {x: 0.4349471, y: 0.13125396}
+      - {x: -0.035621375, y: 0.00087833405}
+      - {x: -0.41126403, y: 0.11141443}
+      - {x: -0.41786906, y: 0.49932027}
+      - {x: -0.49864134, y: 0.4990878}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.49539873, y: 0.5010781}
+  m_UseDelaunayMesh: 0
 --- !u!1 &941673268
 GameObject:
   m_ObjectHideFlags: 0
