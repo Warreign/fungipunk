@@ -13,6 +13,7 @@ public class Cauldron : MonoBehaviour
     private GameObject inside;
     private SpriteRenderer brewRenderer;
     private Brew currentBrew;
+    public Controller gameManager;
 
 
     [Serializable]
@@ -115,6 +116,7 @@ public class Cauldron : MonoBehaviour
             else
             {
                 Debug.Log("Finished brew with result: " + p.name);
+                gameManager.CheckBrew(p.name);
                 finished = true;
                 break;
             }

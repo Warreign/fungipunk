@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements.Experimental;
@@ -17,6 +18,9 @@ public class Bag : MonoBehaviour
     private MushroomPicker picker;
     [SerializeField]
     private SpriteRenderer iconRenderer;
+    [SerializeField]
+    private TextMeshProUGUI countText;
+
     
     public FungiType Type
     {
@@ -31,13 +35,31 @@ public class Bag : MonoBehaviour
         iconRenderer.sprite = picker.GetSprite(Type);
     }
 
+    void Awake()
+    {
+        updateCount();
+    }
+
     // Update is called once per frame
     void Update()
     {
     }
 
+    public void updateCount()
+    {
+        countText.text = Controller.storedMushrooms[Type].ToString();
+    }
+
     void OnMouseDown()
     {
+        int stored = Controller.storedMushrooms[Type];
+        if (stored <= 0)
+        {
+            return;
+        }
+
         spawner.SpawnMushroomOnMouse(Type);
+        Controller.storedMushrooms[Type]--;
+        updateCount();
     }
 }

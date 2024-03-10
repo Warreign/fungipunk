@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Brewery.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/MushroomCatch.unity
+    guid: 847b3f6250a87b84bad7da6fd695ab37
   m_configObjects: {}
