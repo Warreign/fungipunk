@@ -12,4 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1a821efedd26740a5f78f67433cc68, type: 3}
   m_Name: Letter
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - 'Dear Elster, the Master of Mushrommantia,
+
+    
+
+    I am planning to visit
+    your village to meet you and purchase one of your potions. I require your expertise
+    in selecting the right one. Rest assured, I am willing to pay.
+
+    
+
+    Best
+    regards,
+
+    Artur the Rock
+
+'
