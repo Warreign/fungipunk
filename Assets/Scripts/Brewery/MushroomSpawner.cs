@@ -9,24 +9,15 @@ public class MushroomSpawner : MonoBehaviour
 {
 
 
-    MushroomPicker picker;
-    
+    [SerializeField]
+    private MushroomPicker picker;
+
     [SerializeField]
     private InputActionReference mousePoseAction;
     
     [SerializeField]
     private GameObject mushroomPrefab;
-    
-    [SerializeField]
-    private Sprite redMushroom;
-    [SerializeField]
-    private Sprite brownMushroom;
-    [SerializeField]
-    private Sprite purpleMushroom;
-    [SerializeField]
-    private Sprite darkredMushroom;
-    [SerializeField]
-    private Sprite greenMushroom;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +45,7 @@ public class MushroomSpawner : MonoBehaviour
         mushroom.type = type;
         mushroom.isFollow = true;
         
-        renderer.sprite = mushroom.getSprite();
+        renderer.sprite = picker.GetSprite(mushroom.type);
     }
 
 }

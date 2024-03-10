@@ -20,10 +20,10 @@ public class Brew
         colors.Add(Color.white);
     }
 
-    private Dictionary<FungiType, int> content = new Dictionary<FungiType, int>();
+    public Dictionary<FungiType, int> content = new Dictionary<FungiType, int>();
     private List<Color> colors = new List<Color>();
 
-    private Color defaultColor; 
+    public Color defaultColor; 
 
     public void AddMushroom(Mushroom mushy)
     {

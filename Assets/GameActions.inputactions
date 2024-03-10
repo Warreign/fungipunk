@@ -155,6 +155,17 @@
                     "action": "StartBrew",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af40601a-6292-4d94-9313-590f3ea3675e",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FinishBrew",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

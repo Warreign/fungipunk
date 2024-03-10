@@ -11,17 +11,6 @@ public class Mushroom : MonoBehaviour
     [SerializeField]
     private InputActionReference mousePosAction;
 
-    [SerializeField]
-    private Sprite redMush;
-    [SerializeField]
-    private Sprite brownMush;
-    [SerializeField]
-    private Sprite greenMush;
-    [SerializeField]
-    private Sprite darkredMush;
-    [SerializeField]
-    private Sprite purpleMush;
-
     public enum FungiType
     {
         Purple,
@@ -33,25 +22,6 @@ public class Mushroom : MonoBehaviour
     };
 
     public bool isFollow = false;
-
-    public Sprite getSprite()
-    {
-        switch (type)
-        {
-            case FungiType.Red:
-            return redMush;
-            case FungiType.Brown:
-            return brownMush;
-            case FungiType.Purple:
-            return purpleMush;
-            case FungiType.Green:
-            return greenMush;
-            case FungiType.DarkRed:
-            return darkredMush;
-            default:
-            return redMush;
-        }
-    }
 
     public FungiType type = FungiType.Red;
 

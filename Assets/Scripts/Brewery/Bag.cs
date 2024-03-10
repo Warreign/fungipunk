@@ -13,6 +13,11 @@ public class Bag : MonoBehaviour
     private FungiType _type;
 
     public MushroomSpawner spawner;
+    [SerializeField]
+    private MushroomPicker picker;
+    [SerializeField]
+    private SpriteRenderer iconRenderer;
+    
     public FungiType Type
     {
         get => _type;
@@ -22,7 +27,8 @@ public class Bag : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // GetComponentInChildren<SpriteRenderer>().sprite = picker.GetSprite(Type);
+        iconRenderer.sprite = picker.GetSprite(Type);
     }
 
     // Update is called once per frame

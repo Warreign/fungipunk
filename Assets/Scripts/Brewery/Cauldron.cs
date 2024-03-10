@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,26 @@ public class Cauldron : MonoBehaviour
     private GameObject inside;
     private SpriteRenderer brewRenderer;
     private Brew currentBrew;
+
+
+    [Serializable]
+    private struct FungiCount
+    {
+        public FungiType type;
+        public int count;
+    }
+
+    [Serializable]
+    private struct Potion
+    {
+        public string name;
+        public FungiCount[] mushrooms;
+    }
+
+    // Start is called before the first frame update
+
+    [SerializeField]
+    private Potion[] potions;
 
     void Start()
     {
@@ -35,6 +56,7 @@ public class Cauldron : MonoBehaviour
         // Debug.Log(mushy);
         currentBrew.AddMushroom(mushy);
         brewRenderer.color = currentBrew.GetColor();
+        StartCoroutine(ChangeColor(currentBrew.GetColor()));
     }
 
     public void DiscardBrew()
@@ -62,8 +84,42 @@ public class Cauldron : MonoBehaviour
 
     }
 
+    private IEnumerator ChangeColor(Color newColor)
+    {
+        float tick = 0f;
+        Color oldColor = brewRenderer.color;
+        while (brewRenderer.color != newColor)
+        {
+            tick += Time.deltaTime * 0.001f;
+            brewRenderer.material.color = Color.Lerp(oldColor, newColor, tick);
+            yield return null;
+        }
+    }
+
     public void finishBrew()
     {
+        if (currentBrew == null)
+        {
+            Debug.Log("No brew");
+            return;
+        }
+
+        bool finished = false;
+
+        foreach (var p in potions)
+        {
+            if (Array.Exists(p.mushrooms, m => currentBrew.content[m.type] != m.count)) 
+            {
+                continue;
+            }
+            else
+            {
+                Debug.Log("Finished brew with result: " + p.name);
+                finished = true;
+                break;
+            }
+        }
+
         DiscardBrew();
     }
 
