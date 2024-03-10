@@ -10,17 +10,18 @@ public class Cauldron : MonoBehaviour
 
     [SerializeField]
     private GameObject inside;
+    private SpriteRenderer brewRenderer;
     private Brew currentBrew;
 
     void Start()
     {
-        
+        startBrew();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -31,7 +32,9 @@ public class Cauldron : MonoBehaviour
 
     public void AddMushroom(Mushroom mushy)
     {
+        Debug.Log(mushy);
         currentBrew.AddMushroom(mushy);
+        brewRenderer.color = currentBrew.GetColor();
     }
 
     public void DiscardBrew()
@@ -40,15 +43,26 @@ public class Cauldron : MonoBehaviour
         inside.SetActive(false);
     }
 
+   
+
     public void startBrew()
-    {   
+    {
         Debug.Log("Starting new brew");
-        if (!currentBrew)
+        if (currentBrew != null)
         {
         }
 
         currentBrew = new Brew();
+
         inside.SetActive(true);
+        brewRenderer = inside.GetComponent<SpriteRenderer>();
+        brewRenderer.color = currentBrew.GetColor();
+
+    }
+
+    public void finishBrew()
+    {
+
     }
 
 }

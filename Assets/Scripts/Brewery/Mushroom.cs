@@ -1,12 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Mushroom : MonoBehaviour
 {
 
+    [SerializeField]
+    private InputActionReference mousePosAction;
 
+    [SerializeField]
+    private Sprite redMush;
+    [SerializeField]
+    private Sprite brownMush;
+    [SerializeField]
+    private Sprite greenMush;
+    [SerializeField]
+    private Sprite darkredMush;
+    [SerializeField]
+    private Sprite purpleMush;
 
     public enum FungiType
     {
@@ -17,6 +31,27 @@ public class Mushroom : MonoBehaviour
         DarkRed
 
     };
+
+    public bool isFollow = false;
+
+    public Sprite getSprite()
+    {
+        switch (type)
+        {
+            case FungiType.Red:
+            return redMush;
+            case FungiType.Brown:
+            return brownMush;
+            case FungiType.Purple:
+            return purpleMush;
+            case FungiType.Green:
+            return greenMush;
+            case FungiType.DarkRed:
+            return darkredMush;
+            default:
+            return redMush;
+        }
+    }
 
     public FungiType type = FungiType.Red;
 
@@ -29,18 +64,31 @@ public class Mushroom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isFollow)
+        {
+
+            var mouseWorldPos = Camera.main.ScreenToWorldPoint(mousePosAction.action.ReadValue<Vector2>());
+            mouseWorldPos.z = 0f;
+            // gameObject.transform.position = mouseWorldPos;
+
+            var rb = gameObject.GetComponent<Rigidbody2D>();
+            rb.MovePosition(Vector2.MoveTowards(rb.position, mouseWorldPos, 0.9f));
+        }
     }
 
-    void OnMouseDrag()
+    void OnMouseUp()
     {
-
-        var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPos.z = 0f;
-        // gameObject.transform.position = mouseWorldPos;
-
-        var rb = gameObject.GetComponent<Rigidbody2D>();
-        rb.MovePosition(Vector2.Lerp(rb.position, mouseWorldPos, 0.5f));
+        isFollow = false;
     }
+
+    void OnMouseDown()
+    {
+        isFollow = true;
+    }
+
+    // void OnMouseDrag()
+    // {
+
+    // }
 
 }

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3254465609978572523, guid: 7c9547730a778504c9c663fd74dadce2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -126,6 +126,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9db762b4d0ef134d80455410a27e269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mousePosAction: {fileID: -9127245968850117218, guid: c04a8a50ae0d66c46bbf5385abdd7b44, type: 3}
+  redMush: {fileID: -2466618239913141243, guid: 7c9547730a778504c9c663fd74dadce2, type: 3}
+  brownMush: {fileID: 3254465609978572523, guid: 7c9547730a778504c9c663fd74dadce2, type: 3}
+  greenMush: {fileID: -3001842222463096593, guid: 7c9547730a778504c9c663fd74dadce2, type: 3}
+  darkredMush: {fileID: -3284280979202564273, guid: 7c9547730a778504c9c663fd74dadce2, type: 3}
+  purpleMush: {fileID: -2110049701026846784, guid: 7c9547730a778504c9c663fd74dadce2, type: 3}
+  isFollow: 0
   type: 3
 --- !u!60 &2000214989127824917
 PolygonCollider2D:

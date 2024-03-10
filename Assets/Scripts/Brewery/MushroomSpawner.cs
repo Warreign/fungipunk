@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static Mushroom;
@@ -49,25 +50,9 @@ public class MushroomSpawner : MonoBehaviour
         var mushroom = newFungus.GetComponent<Mushroom>();
 
         mushroom.type = type;
+        mushroom.isFollow = true;
         
-        switch (type)
-        {
-            case FungiType.Red:
-            renderer.sprite = redMushroom;
-            break;
-            case FungiType.Green:
-            renderer.sprite = greenMushroom;
-            break;
-            case FungiType.DarkRed:
-            renderer.sprite = darkredMushroom;
-            break;
-            case FungiType.Purple:
-            renderer.sprite = purpleMushroom;
-            break;
-            case FungiType.Brown:
-            renderer.sprite = brownMushroom;
-            break;
-        }
+        renderer.sprite = mushroom.getSprite();
     }
 
 }
