@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,7 +18,7 @@ public class Controller : MonoBehaviour
     {
         foreach (var k in Enum.GetValues(typeof(FungiType)))
         {
-            storedMushrooms.Add((FungiType)k, 5);
+            storedMushrooms.Add((FungiType)k, 0);
         }
     }
 
@@ -40,11 +41,14 @@ public class Controller : MonoBehaviour
     private Customer initialCustomer;
 
     private Customer currentCustomer;
+    public GameObject recipePanel;
+    public TextMeshProUGUI goalText;
 
     public DialogueCollectionAsset firstDayDialogues;
 
     public InputActionReference nextLineAction;
     public InputActionReference goOutsideAction;
+    public InputActionReference openRecipesAction;
     public DialogueController dialogueController;
 
     static Controller()
@@ -81,9 +85,11 @@ public class Controller : MonoBehaviour
                 b.updateCount();
             }
         }
+        goalText.text = dialogueController.GetGoalName();
 
         nextLineAction.action.performed += (InputAction.CallbackContext c) => NextLine();
         goOutsideAction.action.performed += (InputAction.CallbackContext c) => SceneManager.LoadScene("MushroomCatch");
+        openRecipesAction.action.performed += (InputAction.CallbackContext c) => recipePanel.SetActive(!recipePanel.activeSelf);
         
     }
 
@@ -109,8 +115,20 @@ public class Controller : MonoBehaviour
     {
         if (name.Equals(dialogueController.GetGoalName()))
         {
-            dialogueController.nextGoal();
+            if (dialogueController.nextGoal())
+            {
+                goalText.text = dialogueController.GetGoalName();
+            }
+            else{
+                winScreen();
+            }
+            
         }
+    }
+
+    public void winScreen()
+    {
+
     }
 
     public void NextGoal()
