@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Roach
   m_EditorClassIdentifier: 
   dialogue:
-  - Good m*oink*rning. How are you?
-  - Same here. Have you heard? One of the Heroes is heading our way. Artur the Rock.
-    You might want to check your mail.
+  - Good morning. How are you?
+  - 'Nice. I won a few games of cards and had some drinks. What about you ?. Have
+    you heard of it? One of the Heroes is heading our way. Artur the Rock. You might
+    want to check your mail. '
   - Yes, and you ought to prepare for his arrival. You once confessed your admiration
     for him.
   - ' Unfortunately, he wont come today. And for future please, refrain from trying
