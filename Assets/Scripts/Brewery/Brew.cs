@@ -11,11 +11,13 @@ public class Brew
 
     public Brew()
     {
-        // foreach (var k in content.Keys)
-        // {
-        //     content[k] = 0;
-        // }
+        foreach (var k in Enum.GetValues(typeof(FungiType)))
+        {
+            content.Add((FungiType)k, 0);
+        }
         ColorUtility.TryParseHtmlString("#64E6FF", out defaultColor);
+
+        colors.Add(Color.white);
     }
 
     private Dictionary<FungiType, int> content = new Dictionary<FungiType, int>();
@@ -27,7 +29,7 @@ public class Brew
     {
         Debug.Log("Added " + mushy.type);
 
-        // content[mushy.type] += 1;
+        content[mushy.type] += 1;
 
         Color c = Color.white;
         switch (mushy.type)
@@ -55,8 +57,9 @@ public class Brew
 
     public Color GetColor()
     {
-        if (colors.Count == 0)
+        if (colors.Count <= 1)
         {
+            Debug.Log("Current count " + colors.Count);
             return defaultColor;
         }
 

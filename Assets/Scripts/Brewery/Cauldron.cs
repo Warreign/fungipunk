@@ -15,7 +15,7 @@ public class Cauldron : MonoBehaviour
 
     void Start()
     {
-        startBrew();
+        // startBrew();
     }
 
     // Update is called once per frame
@@ -32,13 +32,14 @@ public class Cauldron : MonoBehaviour
 
     public void AddMushroom(Mushroom mushy)
     {
-        Debug.Log(mushy);
+        // Debug.Log(mushy);
         currentBrew.AddMushroom(mushy);
         brewRenderer.color = currentBrew.GetColor();
     }
 
     public void DiscardBrew()
     {
+        Debug.Log("Discarding brew");
         currentBrew = null;
         inside.SetActive(false);
     }
@@ -47,10 +48,11 @@ public class Cauldron : MonoBehaviour
 
     public void startBrew()
     {
-        Debug.Log("Starting new brew");
         if (currentBrew != null)
         {
+            return;
         }
+        Debug.Log("Starting new brew");
 
         currentBrew = new Brew();
 
@@ -62,7 +64,7 @@ public class Cauldron : MonoBehaviour
 
     public void finishBrew()
     {
-
+        DiscardBrew();
     }
 
 }

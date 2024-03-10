@@ -9,6 +9,8 @@ public class MushroomSpawner : MonoBehaviour
 {
 
 
+    MushroomPicker picker;
+    
     [SerializeField]
     private InputActionReference mousePoseAction;
     

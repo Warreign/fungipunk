@@ -222,7 +222,19 @@ MonoBehaviour:
     m_ActionId: 5621e025-e626-4bda-8451-5c8d60779698
     m_ActionName: Brewery/AcceptCustomer
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d12c5f39-e9c1-46a6-8c66-04d35a6bcea5
     m_ActionName: Brewery/DiscardBrew
   - m_PersistentCalls:
@@ -1114,7 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361951314a34bd04ebd6da0f24a70af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brewRenderer: {fileID: 1570866598}
+  inside: {fileID: 1570866596}
 --- !u!68 &1905639945
 EdgeCollider2D:
   m_ObjectHideFlags: 0

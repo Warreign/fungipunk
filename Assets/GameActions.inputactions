@@ -58,6 +58,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "FinishBrew",
+                    "type": "Button",
+                    "id": "6f0a37a4-0329-421b-9032-6ac491961c5c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "StartBrew",
+                    "type": "Button",
+                    "id": "3666422b-63b9-4b79-b281-9657b9171ad9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -108,7 +126,7 @@
                 {
                     "name": "",
                     "id": "c4caaf15-aead-4c42-8fb5-d27fe065d213",
-                    "path": "",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -124,6 +142,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d0d5cb6-41ad-43be-9e62-2b18c1db4f25",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartBrew",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
