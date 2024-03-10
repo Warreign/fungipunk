@@ -90,19 +90,8 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "0f3e25b6-ae92-4f5e-9de4-eb4ee927550c",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SpawnMushroom",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "311636dd-364c-43e9-a1d4-3fc5e41d7851",
-                    "path": "",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

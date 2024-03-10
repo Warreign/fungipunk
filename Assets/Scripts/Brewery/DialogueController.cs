@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,11 +15,13 @@ public class DialogueController : MonoBehaviour
 
     [SerializeField]
     private DialogueCollectionAsset currentDialogue;
+    private bool isCurrentOver = true;
     private int linePosition;
 
     public void StartDialogue(DialogueCollectionAsset newDialogue)
     {
         currentDialogue = newDialogue;
+        isCurrentOver = false;
         dialogBox.SetActive(true);
         linePosition = -1;
 
@@ -26,23 +29,27 @@ public class DialogueController : MonoBehaviour
         {
             d.clear();
         }
-        
+
         yieldLine();
     }
 
     public void EndDialogue()
     {
-        currentDialogue = null;
+        // currentDialogue = null;
+        isCurrentOver = true;
         dialogBox.SetActive(false);
         linePosition = -1;
+
+        nameText.text = String.Empty;
+        dialogueText.text = String.Empty;
     }
 
-    public void yieldLine()
+    public bool yieldLine()
     {
-        if (currentDialogue == null)
+        if (isCurrentOver)
         {
             Debug.Log("No dialogue");
-            return;
+            return false;
         }
 
         linePosition++;
@@ -50,7 +57,7 @@ public class DialogueController : MonoBehaviour
         {
             Debug.Log("Dialog collection has ended");
             EndDialogue();
-            return;
+            return false;
         }
 
         // nameText.text = currentDialogue.sequence[linePosition];
@@ -58,10 +65,31 @@ public class DialogueController : MonoBehaviour
 
         nameText.text = currentCharacter.name;
         dialogueText.text = currentCharacter.nextLine();
+
+        return true;
+    }
+
+    public string GetGoalName()
+    {
+        return currentDialogue.goalPotion;
+    }
+
+    public bool nextGoal()
+    {
+        if (currentDialogue.nextGoal != null)
+        {
+            StartDialogue(currentDialogue.nextGoal);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public string GetCurrentName()
     {
+        if (isCurrentOver) return "";
         return currentDialogue.dialogs[currentDialogue.sequence[linePosition]].name;
     }
 

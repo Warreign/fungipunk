@@ -8,4 +8,6 @@ public class DialogueCollectionAsset : ScriptableObject
     public DialogueAsset[] dialogs;
 
     public int[] sequence;
+    public string goalPotion;
+    public DialogueCollectionAsset nextGoal;
 }
