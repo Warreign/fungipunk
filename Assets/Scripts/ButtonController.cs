@@ -13,6 +13,14 @@ public class ButtonController : MonoBehaviour
         SceneManager.LoadScene("Brewery");
     }
 
+    public void onClickCloseTutorial(GameObject gameObject){
+        gameObject.SetActive(false);
+    }
+
+    public void onClickOpenTutorial(GameObject gameObject){
+        gameObject.SetActive(true);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
