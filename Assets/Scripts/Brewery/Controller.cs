@@ -1,14 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static Mushroom;
 
 public class Controller : MonoBehaviour
 {
 
-    [SerializeField]
-    private GameObject mushroomPrefab;
+    [Serializable]
+    private struct FungiCount
+    {
+        FungiType type;
+        int count;
+    }
+
+    [Serializable]
+    private struct Potion
+    {
+        string name;
+        FungiCount[] mushrooms;
+    }
+
     // Start is called before the first frame update
+
+    [SerializeField]
+    private Potion[] potions;
+
     void Start()
     {
         DontDestroyOnLoad(this);
@@ -20,11 +38,5 @@ public class Controller : MonoBehaviour
         
     }
 
-    public void SpawnMushroomOnMouse()
-    {
-        var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPos.z = 0f;
-
-        Instantiate(mushroomPrefab, mouseWorldPos, Quaternion.identity);
-    }
+    
 }
