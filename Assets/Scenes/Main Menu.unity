@@ -572,8 +572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 139.50632, y: -19.000004}
-  m_SizeDelta: {x: 859.1895, y: 558.4982}
+  m_AnchoredPosition: {x: 97.54639, y: -19}
+  m_SizeDelta: {x: 859.1895, y: 614.4449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540374889
 MonoBehaviour:
@@ -600,7 +600,7 @@ MonoBehaviour:
     in the minigame, then prepare the potion.\r\nRed mushrooms are useless, don`t
     catch them.\nMove your mouse in the mushroom collecting minigame to control the
     character. \r\nF - start collecting mushrooms.\r\nT - end cooking\r\nE - start
-    new potion\r\nQ - discard current potion\n"
+    new potion\r\nQ - discard current potion\nR - recipe scroll"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2ba9f64fa7e7d094cb649c4fa6a846b8, type: 2}
   m_sharedMaterial: {fileID: -746465550235246015, guid: 2ba9f64fa7e7d094cb649c4fa6a846b8, type: 2}
@@ -1924,7 +1924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2066276064
 RectTransform:
   m_ObjectHideFlags: 0
