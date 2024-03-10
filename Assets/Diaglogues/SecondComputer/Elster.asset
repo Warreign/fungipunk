@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1a821efedd26740a5f78f67433cc68, type: 3}
+  m_Name: Elster
+  m_EditorClassIdentifier: 
+  dialogue:
+  - And what about your friend Scott? When is he due?
+  - But I thought my last potion was splendid.
+  - Oh dear... My apologies. Perhaps I erred with one of the mushrooms. Let's hope
+    he doesn't increase his prices for me.
+  - Trust me, Roach, my heart belongs to my craft, not to any hero. Anyway, I need
+    to gather some mushrooms. Can you assist me?
+  - No problem, I'll manage.
+  - "Soo\u2026. The new client."
+  - Hello. So, how can I help you?
+  - Nice cat ears. They're quite unique.
+  - I see... That must have been a harrowing experience.
+  - Of course. What do you need?
+  - Whose face are you trying to recall?
+  - "I understand. It's a painful memory. Let me think\u2026 "
+  - 'I think it can be called "Lacrimosa." '

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1a821efedd26740a5f78f67433cc68, type: 3}
+  m_Name: Itan
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Hello\u2026"
+  - Can I explain the situation... But promise not to laugh?
+  - Alright... So... I'm working on this project about the lives of kings, and I
+    need a dream where I can experience being a king.
+  - ' I want it to involve harems, grand banquets, epic battles... You know, all
+    the extravagant stuff. I want to truly immerse myself in the power and luxury
+    of being a king.'
+  - Whitestone University.
+  - Will do. So, are you willing to help me with my project?
+  - Thank you, Miss Elster. I'll return later to take it.

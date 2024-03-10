@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1a821efedd26740a5f78f67433cc68, type: 3}
+  m_Name: Roach
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Thank.
+  - Unfortunately, he wont come today. And for future please, refrain from trying
+    to sell him anything.
+  - Unfortunately, he had a dream involving a colossal flapper attempting to end
+    him. As for the spider, it was a downright nightmare.
+  - Also Elster, you've been spending a lot of time preparing for Artur's visit.
+    Are you sure you're not brewing up a love potion instead of your usual concoctions?
+  - Apologies, but I have some tasks to attend to.

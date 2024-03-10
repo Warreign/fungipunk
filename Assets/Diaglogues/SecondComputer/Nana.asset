@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1a821efedd26740a5f78f67433cc68, type: 3}
+  m_Name: Nana
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Yes. Hello.
+  - My name is Nana, a guard's archer.
+  - Thank you. One of them is natural, the other - is an illusion. I lost them during
+    the Siege of Snowgrad.
+  - Indeed, it was. But I'm here for a different reason today.
+  - I need potions that can help me see the face from the past...
+  - The killer of my friend. When the battle for Snowgard began, we were in the camp.
+    They attacked us from behind like cowards. I remember perfectly how he looked,
+    but the face... I couldn't remember.
