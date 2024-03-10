@@ -572,8 +572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 84, y: -19}
-  m_SizeDelta: {x: 859.1895, y: 632.5065}
+  m_AnchoredPosition: {x: 139.50632, y: -19.000004}
+  m_SizeDelta: {x: 859.1895, y: 558.4982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540374889
 MonoBehaviour:
@@ -596,13 +596,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Your MAIN GOAL IS cooking the potion. \r\nListen to the customer, and
-    use the manual to decide what potion you have to cook.\r\nCollecte the mushrooms
-    and in the minigame, then prepare the potion.\r\nYou can affect the dreams if
-    you add the \u201CFly-agaric\u201D or \u201CBloody mistress\u201D.\r\n\u201CFly-agaric\u201D
-    - you can change the time of \r\n\u201CBloody mistress\u201D - you can change
-    the mood of dream\r\nMove the mouse in the collecting mushrooms minigame to control
-    the character. \r\nF - start collecting mushrooms.\r\nT - end cooking\r\nE -
-    pour water\r\nQ - pour into the trash\r\n"
+    use the manual to decide what potion you have to cook.\r\nCollect the mushrooms
+    in the minigame, then prepare the potion.\r\nRed mushrooms are useless, don`t
+    catch them.\nMove your mouse in the mushroom collecting minigame to control the
+    character. \r\nF - start collecting mushrooms.\r\nT - end cooking\r\nE - start
+    new potion\r\nQ - discard current potion\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2ba9f64fa7e7d094cb649c4fa6a846b8, type: 2}
   m_sharedMaterial: {fileID: -746465550235246015, guid: 2ba9f64fa7e7d094cb649c4fa6a846b8, type: 2}
@@ -629,8 +627,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

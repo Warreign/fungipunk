@@ -151,7 +151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2563550663067948096
 RectTransform:
   m_ObjectHideFlags: 0
@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &686005045284980599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -665,6 +665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RecepieLacrimosa
       objectReference: {fileID: 0}
+    - target: {fileID: 4843461526801351156, guid: 3b31bbad17f8b2d4b915a8f7b0b296db, type: 3}
+      propertyPath: m_text
+      value: ' IF SOMEONE WANTS TO SEE THE DREAMS'
+      objectReference: {fileID: 0}
     - target: {fileID: 5018632432324156227, guid: 3b31bbad17f8b2d4b915a8f7b0b296db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -775,6 +779,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1423572363008712934}
     m_Modifications:
+    - target: {fileID: 2992663903066887427, guid: 66469509fa6d2d54f8807c4ef86de821, type: 3}
+      propertyPath: m_text
+      value: IF SOMEONE WANTS TO SEE OTHER PEOPLE`S DREAM
+      objectReference: {fileID: 0}
     - target: {fileID: 7670300128972377145, guid: 66469509fa6d2d54f8807c4ef86de821, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -801,11 +809,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670300128972377145, guid: 66469509fa6d2d54f8807c4ef86de821, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -2520.89
+      value: -2573.595
       objectReference: {fileID: 0}
     - target: {fileID: 7670300128972377145, guid: 66469509fa6d2d54f8807c4ef86de821, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -710.815
+      value: -789.12
       objectReference: {fileID: 0}
     - target: {fileID: 7670300128972377145, guid: 66469509fa6d2d54f8807c4ef86de821, type: 3}
       propertyPath: m_LocalScale.x
@@ -845,11 +853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670300128972377145, guid: 66469509fa6d2d54f8807c4ef86de821, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -231
+      value: -86
       objectReference: {fileID: 0}
     - target: {fileID: 7670300128972377145, guid: 66469509fa6d2d54f8807c4ef86de821, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7670300128972377145, guid: 66469509fa6d2d54f8807c4ef86de821, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -892,6 +900,10 @@ PrefabInstance:
     - target: {fileID: 5322082643258303967, guid: 3e25b163ddbc39644bb98cb42a586a1a, type: 3}
       propertyPath: m_Name
       value: RecepieValhalla
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134309518514815219, guid: 3e25b163ddbc39644bb98cb42a586a1a, type: 3}
+      propertyPath: m_text
+      value: IF SOMEONE WANTS TO FIGHT WITH OTHER SOMEONE
       objectReference: {fileID: 0}
     - target: {fileID: 6548151765885761103, guid: 3e25b163ddbc39644bb98cb42a586a1a, type: 3}
       propertyPath: m_Color.a
@@ -1003,6 +1015,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1423572363008712934}
     m_Modifications:
+    - target: {fileID: 130801377604171865, guid: 972acaa2e983bac4d8a6dd5940756cb6, type: 3}
+      propertyPath: m_text
+      value: IF SOMEONE WANTS TO FEEL LIKE A KING
+      objectReference: {fileID: 0}
     - target: {fileID: 3697742481199009139, guid: 972acaa2e983bac4d8a6dd5940756cb6, type: 3}
       propertyPath: m_Name
       value: RecepieDaiquiri
