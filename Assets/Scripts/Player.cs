@@ -32,7 +32,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.DeleteAll();
+        foreach(var typeF in Enum.GetNames(typeof(FungiType))){
+            PlayerPrefs.DeleteKey(typeF);
+        }
         fungiSTextDict = new Dictionary<FungiType, TextMeshProUGUI>();
         for(int i = 0; i < 5; i++){
             fungiSTextDict.Add(fungiSText[i].name, fungiSText[i].text);
